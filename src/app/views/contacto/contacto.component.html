@@ -1,0 +1,112 @@
+
+<div class="fadeIn">
+  <div class="titulo-pantalla">
+    <p>
+      Contacto
+    </p>
+  </div>
+  <div class="titulo2">
+    <p>
+      Si desea saber algún tipo de información sobre nuestros productos puedo contactarnos o si desea
+      una cotización especial lo puede hacer saber a través del siguiente formulario
+    </p>
+  </div>
+
+  <div class="formulario">
+    <form
+    (keydown.enter)="$event.preventDefault()"
+    #formulario="ngForm"
+    (ngSubmit)="enviarFormulario(formulario)"
+    novalidate="novalidate"
+    >
+      <div class="entradas">
+        <div class="row" style="justify-content: space-evenly;">
+          <div class="col-md-6">
+            <div class="form-group">
+              <div>
+                <input
+                  [(ngModel)]="nombre"
+                  name="nombre"
+                  class="form-control"
+                  type="text"
+                  required
+                  placeholder="Nombre"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <div>
+                <input
+                  [(ngModel)]="apellido"
+                  name="apellido"
+                  class="form-control"
+                  type="text"
+                  required
+                  placeholder="Apellido"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="justify-content: space-evenly;">
+          <div class="col-md-6">
+            <div class="form-group">
+              <div>
+                <input
+                  [(ngModel)]="correo"
+                  name="correo"
+                  class="form-control"
+                  type="text"
+                  required
+                  placeholder="Correo electrónico"
+                  appFormatoCorreo
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <div>
+                <input
+                  [(ngModel)]="asunto"
+                  name="asunto"
+                  class="form-control"
+                  type="text"
+                  required
+                  placeholder="Asunto"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="justify-content: space-evenly;">
+          <div class="col-md-12">
+            <div class="form-group">
+              <div>
+                <textarea
+                  [(ngModel)]="comentario"
+                  name="comentario"
+                  class="form-control"
+                  type="text"
+                  style="resize: none;"
+                  required
+                  placeholder="Redacte aquí su comentario"
+                  rows="10">
+                </textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center">
+            <button type="submit" class="btn px-4 boton" [disabled]="btnSubmit">Enviar</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+

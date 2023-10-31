@@ -1,0 +1,25 @@
+.boton1 {
+  background-color: #B52E33;
+  color: white;
+  margin-left: 13px;
+  margin-top: 20px;
+}
+
+.boton2 {
+  background-color: #B4B4B4;
+  color: white;
+  margin-right: 20px;
+  margin-left: 15px;
+  margin-top: 20px;
+
+}
+
+.formulario {
+  padding-right: 250px;
+  padding-left: 250px;
+  padding-top: 20px;
+}
+
+.entrada {
+  background-color: #c5c5c5;
+}

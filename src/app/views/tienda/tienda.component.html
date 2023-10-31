@@ -1,0 +1,24 @@
+<div class="fadeIn">
+  <div class="titulo-pantalla">
+    <p>
+      Tienda
+    </p>
+  </div>
+  <div style="text-align: center;">
+    <div *ngFor="let producto of productos$ | async" class="item-all">
+      <div  class="item">
+        <img src="{{producto.src}}" width="200px" class="products">
+        <div class="spacing">
+          <h4>{{producto.producto}}</h4>
+        </div>
+        <div class="spacing">
+          <h5>$ {{producto.precio}} MXN</h5>
+        </div>
+        <div class="spacing">
+          <button type="submit" class="btn px-4 boton" (click)="click()">Agregar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

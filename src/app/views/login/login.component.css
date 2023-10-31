@@ -1,0 +1,26 @@
+.login {
+  padding-left: 120px;
+  padding-right: 120px;
+  padding-top: 44px;
+  font-size: 20px;
+}
+
+.boton {
+  background-color: #B52E33;
+  color: white;
+}
+
+.container-all {
+  width: 100%;
+}
+
+.cliente {
+  padding-left: 40px;
+  padding-top: 20px;
+  padding-right: 40px;
+  padding-bottom: 58px;
+}
+
+h3, h4 {
+  font-family: 'Yu Gothic UI Semibold';
+}

@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+  font-family: 'Yu Gothic UI Semibold';
+}
+
+.titulo-pantalla {
+  text-align: center;
+  font-size: 35px;
+  color: #333333;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
+
+.fadeIn{
+  animation:opac 0.9s
+}
+
+@keyframes opac{
+  from {
+    opacity:0
+  } to {
+    opacity:1
+  }
+}
+

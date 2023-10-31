@@ -1,0 +1,33 @@
+
+.container-footer-all {
+  width: 100%;
+  background-color: #FFFFFF;
+  padding-left: 73px;
+  padding-right: 90px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+
+.container-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column1 {
+  max-width: 300px;
+}
+
+.column2 {
+  max-width: 300px;
+}
+
+.column3 {
+  max-width: 300px;
+}
+
+.reproductor-video {
+  padding-top: 20px;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-bottom: 30px;
+}

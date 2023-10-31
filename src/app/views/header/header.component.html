@@ -1,0 +1,58 @@
+<nav class="header">
+  <a class="letra" routerLinkActive="active" routerLink="inicio">Inicio</a>
+  <a class="letra" routerLinkActive="active" routerLink="tienda">Tienda</a>
+  <a class="letra" routerLinkActive="active" routerLink="acerca-de"
+    >Acerca de</a
+  >
+  <img
+    routerLinkActive="active"
+    routerLink="inicio"
+    src="assets\LOGO ASAHEL COLOR.jpg"
+    alt=""
+    width="150px"
+  />
+  <a class="letra" routerLinkActive="active" routerLink="contacto">Contacto</a>
+  <div>
+    <a *ngIf="user === 'true'" (click)="getOut()"
+      ><i
+        class="fas fa-sign-out-alt fa-lg"
+        style="color: #b52e33; width: 80px"
+      ></i
+    ></a>
+    <a *ngIf="user !== 'true'" routerLinkActive="active" routerLink="login"
+      ><i class="fas fa-user fa-lg" style="color: #b52e33; width: 80px"></i
+    ></a>
+    <a routerLinkActive="active" routerLink="carrito"
+      ><i
+        class="fas fa-shopping-cart fa-lg"
+        style="color: #b52e33; width: 100px"
+      ></i
+    ></a>
+    <a routerLinkActive="active" routerLink="pedidos"
+      ><i
+        class="fas fa-clipboard-list fa-lg"
+        style="color: #b52e33; width: 80px"
+      ></i
+    ></a>
+  </div>
+</nav>
+<hr
+  style="
+    margin-bottom: 0px;
+    margin-top: 0px;
+    height: 9px;
+    border-width: 0;
+    color: #b52e33;
+    background-color: #b52e33;
+  "
+/>
+<hr
+  style="
+    margin-bottom: 0px;
+    margin-top: 0px;
+    height: 9px;
+    border-width: 0;
+    color: #eac41e;
+    background-color: #eac41e;
+  "
+/>

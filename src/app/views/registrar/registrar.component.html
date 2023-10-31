@@ -1,0 +1,174 @@
+<div class="fadeIn">
+  <div class="titulo-pantalla">
+    <p>
+      Registrate
+    </p>
+  </div>
+
+  <div class="formulario">
+    <form
+    (keydown.enter)="$event.preventDefault()"
+    #formulario="ngForm"
+    (ngSubmit)="enviarFormulario(formulario)"
+    novalidate="novalidate"
+    >
+      <div class="entradas">
+        <div class="row" style="justify-content: space-evenly;">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label class="label-input required-label">Nombre</label>
+              <div>
+                <input
+                  #nombre="ngModel"
+                  [(ngModel)]="usuario.nombre"
+                  name="nombre"
+                  class="form-control entrada"
+                  maxlength="50"
+                  type="text"
+                  required="required"
+                />
+                <div
+                    *ngIf="nombre.errors?.required && nombre.touched"
+                    class="error"
+                  >
+                    El nombre es requerido
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="justify-content: space-evenly;">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="label-input required-label">Apellido Paterno</label>
+              <div>
+                <input
+                  #apellidoPaterno="ngModel"
+                  [(ngModel)]="usuario.apellidoPaterno"
+                  name="apellidoPaterno"
+                  class="form-control entrada"
+                  maxlength="50"
+                  type="text"
+                  required="required"
+                />
+                <div
+                *ngIf="apellidoPaterno.errors?.required && apellidoPaterno.touched"
+                class="error"
+                 >
+                  El apellido paterno es requerido
+               </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label class="label-input required-label">Apellido Materno</label>
+              <div>
+                <input
+                  #apellidoMaterno="ngModel"
+                  [(ngModel)]="usuario.apellidoMaterno"
+                  name="apellidoMaterno"
+                  class="form-control entrada"
+                  maxlength="50"
+                  type="text"
+                  required="required"
+                />
+                <div
+                *ngIf="apellidoMaterno.errors?.required && apellidoMaterno.touched"
+                class="error"
+                >
+                  El apellido materno es requerido
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="justify-content: space-evenly;">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label class="label-input required-label">Correo electrónico</label>
+              <div>
+                <input
+                  #correo="ngModel"
+                  [(ngModel)]="usuario.correo"
+                  name="correo"
+                  class="form-control entrada"
+                  type="text"
+                  required
+                  appFormatoCorreo
+              />
+              <div
+              *ngIf="correo.errors?.required && correo.touched"
+              class="error"
+              >
+                El correo es requerido
+              </div>
+              <div *ngIf="correo.errors?.formatoCorreo" class="error">
+                El correo electrónico tiene un formato inválido
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="justify-content: space-evenly;">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label class="label-input required-label">Teléfono</label>
+              <div>
+                <input
+                  #telefono="ngModel"
+                  [(ngModel)]="usuario.telefono"
+                  name="telefono"
+                  class="form-control entrada"
+                  type="text"
+                  required
+                  maxlength="10"
+                  appFormatoTelefono
+              />
+              <div
+                *ngIf="telefono.errors?.required && telefono.touched"
+                class="error"
+              >
+                El teléfono es requerido
+              </div>
+              <div *ngIf="telefono.errors?.formatoTelefono" class="error">
+                El teléfono tiene un formato inválido
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" style="justify-content: space-evenly;">
+          <div class="col-md-12">
+            <div class="form-group">
+              <label class="label-input required-label">Contraseña</label>
+              <div>
+                <input
+                  #contrasena="ngModel"
+                  [(ngModel)]="usuario.contrasena"
+                  name="contrasena"
+                  class="form-control entrada"
+                  type="password"
+                  required="required"
+                />
+                <div
+                *ngIf="contrasena.errors?.required && contrasena.touched"
+                class="error"
+                >
+                  El contraseña es requerida
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center" style="justify-content: space-between;">
+            <button class="btn px-4 boton2" routerLinkActive="active" routerLink='/login'>Regresar</button>
+            <button type="submit" class="btn px-4 boton1" [disabled]="btnSubmit" >Registrate</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</div>

@@ -1,0 +1,29 @@
+.item {
+  height: 350px;
+  width: 300px;
+  background-color: #EEEEEE;
+}
+
+.item-all {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 100px;
+  padding-right: 100px;
+  text-align: center;
+  display: inline-block;
+}
+
+.boton {
+  background-color: #B52E33;
+  color: white;
+}
+
+.products {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.spacing {
+  padding-bottom: 20px;
+  padding-bottom: 20px;
+}
